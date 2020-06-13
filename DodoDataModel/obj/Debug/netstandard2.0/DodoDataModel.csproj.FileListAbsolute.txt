@@ -1,0 +1,9 @@
+C:\Project\AspServerDodo\DodoDataModel\bin\Debug\netstandard2.0\DodoDataModel.deps.json
+C:\Project\AspServerDodo\DodoDataModel\bin\Debug\netstandard2.0\DodoDataModel.dll
+C:\Project\AspServerDodo\DodoDataModel\bin\Debug\netstandard2.0\DodoDataModel.pdb
+C:\Project\AspServerDodo\DodoDataModel\obj\Debug\netstandard2.0\DodoDataModel.csprojAssemblyReference.cache
+C:\Project\AspServerDodo\DodoDataModel\obj\Debug\netstandard2.0\DodoDataModel.AssemblyInfoInputs.cache
+C:\Project\AspServerDodo\DodoDataModel\obj\Debug\netstandard2.0\DodoDataModel.AssemblyInfo.cs
+C:\Project\AspServerDodo\DodoDataModel\obj\Debug\netstandard2.0\DodoDataModel.csproj.CoreCompileInputs.cache
+C:\Project\AspServerDodo\DodoDataModel\obj\Debug\netstandard2.0\DodoDataModel.dll
+C:\Project\AspServerDodo\DodoDataModel\obj\Debug\netstandard2.0\DodoDataModel.pdb

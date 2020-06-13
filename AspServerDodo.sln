@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspServerDodo", "AspServerDodo\AspServerDodo.csproj", "{B743A2C4-C4E2-433C-8A08-340A713DC7F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DodoDataModel", "DodoDataModel\DodoDataModel.csproj", "{F0C62AD0-A012-451B-9A19-068BEAD898CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B743A2C4-C4E2-433C-8A08-340A713DC7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B743A2C4-C4E2-433C-8A08-340A713DC7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B743A2C4-C4E2-433C-8A08-340A713DC7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B743A2C4-C4E2-433C-8A08-340A713DC7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0C62AD0-A012-451B-9A19-068BEAD898CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0C62AD0-A012-451B-9A19-068BEAD898CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0C62AD0-A012-451B-9A19-068BEAD898CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0C62AD0-A012-451B-9A19-068BEAD898CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81875BE4-7543-4E0E-83A4-2D75F3DEB3EB}
+	EndGlobalSection
+EndGlobal
