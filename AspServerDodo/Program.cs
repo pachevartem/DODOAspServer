@@ -18,7 +18,7 @@ namespace AspServerDodo
 {
     public class Program
     {
-        public static Dictionary<User, IClientProxy> UnityClients = new Dictionary<User, IClientProxy>();
+        public static Dictionary<User, MyClientProxy> UnityClients = new Dictionary<User, MyClientProxy>();
         public static Room room;
         public static void Main(string[] args)
         {

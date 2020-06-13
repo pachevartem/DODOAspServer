@@ -33,8 +33,22 @@ namespace AspServerDodo.Logic
             {
                 foreach (var user in Users)
                 {
-                    Program.UnityClients[user].SendCoreAsync("OnRoomComlete", new[] { "1" });
+                    Program.UnityClients[user].ClientProxy.SendCoreAsync("OnRoomComlete", new[] { "1" });
                 }
+            }
+        }
+
+        public void RemoveUser(User u)
+        {
+                Trace.WriteLine("REMOVE USER");
+            foreach (User user in Users)
+            {
+                Trace.WriteLine($"UserID: {user.guid} \nu: {u.guid}");
+            }
+            if (Users.Contains(u))
+            {
+                Trace.WriteLine("Contains USER");
+                Users.Remove(u);
             }
         }
 
