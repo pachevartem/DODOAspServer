@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AspServerDodo.Hubs;
 using DodoDataModel;
 
+
 namespace AspServerDodo.Logic
 {
     public class Room
@@ -21,7 +22,6 @@ namespace AspServerDodo.Logic
 
         public void AddUser(User u)
         {
-            Helper.Log($"Room key: {keyRoom}, Userkey: {u.keyRoom}");
             if (!Users.Contains(u) && u.keyRoom == keyRoom)
             {
                 Users.Add(u);
@@ -40,14 +40,8 @@ namespace AspServerDodo.Logic
 
         public void RemoveUser(User u)
         {
-            Helper.Log("REMOVE USER");
-            foreach (User user in Users)
-            {
-                Helper.Log($"UserID: {user.guid} \nu: {u.guid}");
-            }
             if (Users.Contains(u))
             {
-                Helper.Log("Contains USER");
                 Users.Remove(u);
             }
         }

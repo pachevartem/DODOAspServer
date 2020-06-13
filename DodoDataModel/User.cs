@@ -6,5 +6,18 @@ namespace DodoDataModel
     {
         public Guid guid;
         public string keyRoom;
+
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() != typeof(User))
+            {
+                return false;
+            }
+            else
+            {
+              return   guid.Equals(((User)obj).guid);
+            }
+
+        }
     }
 }

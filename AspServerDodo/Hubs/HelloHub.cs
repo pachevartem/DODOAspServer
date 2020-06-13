@@ -15,37 +15,38 @@ namespace AspServerDodo.Hubs
     {
         public HelloHub()
         {
-            Helper.Log("Create hub");
+            Helper.Log($"Create new hub");
         }
 
         public void ClientRegistration(String json)
         {
-            Helper.Log($" ConnectionID:     {Context.ConnectionId}");
             User user = Newtonsoft.Json.JsonConvert.DeserializeObject<User>(json);
 
             Helper.Log($"Client Registration Userkey: {user.keyRoom}, guid: {user.guid}");
 
-            Program.UnityClients.Add(user, new MyClientProxy() {ClientProxy = Clients.Caller, ConnectionID = Context.ConnectionId});
+            Program.UnityClients.Add(user, new MyClientProxy() { ClientProxy = Clients.Caller, ConnectionID = Context.ConnectionId });
             Program.room.AddUser(user);
         }
 
         public override Task OnDisconnectedAsync(Exception exception)
         {
-            Helper.Log("_____________Disconnect");
-            Helper.Log("ConnectionID: "+Context.ConnectionId);
+            Helper.Log($"Client Discnnected with ConnectionID: {Context.ConnectionId}");
 
+            User _user = null;
             foreach (KeyValuePair<User, MyClientProxy> pair in Program.UnityClients)
             {
-                //Trace.WriteLine($"\n Key:           {pair.Key.guid},\n Value:         {pair.Value},\n Client.Calle:  {Clients.Caller} \n");
-
                 if (pair.Value.ConnectionID == Context.ConnectionId)
                 {
-                    Helper.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-                    Program.UnityClients.Remove(pair.Key);
-                    Program.room.RemoveUser(pair.Key);
+                    _user = pair.Key;
                 }
             }
-            //Program.UnityClients.Remove()
+
+            if (_user != null)
+            {
+                Program.UnityClients.Remove(_user);
+                Program.room.RemoveUser(_user);
+            }
+
             return base.OnDisconnectedAsync(exception);
         }
     }
