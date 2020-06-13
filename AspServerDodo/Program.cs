@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -32,5 +33,15 @@ namespace AspServerDodo
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+    }
+
+
+    public static class Helper
+    {
+        public static void Log(string w)
+        {
+            Trace.WriteLine(w);
+            Console.WriteLine(w);
+        }
     }
 }

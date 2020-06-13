@@ -17,19 +17,19 @@ namespace AspServerDodo.Logic
 
         private string keyRoom;
         public List<User> Users = new List<User>();
-       
+
 
         public void AddUser(User u)
         {
-            Trace.WriteLine($"Room key: {keyRoom}, Userkey: {u.keyRoom}");
+            Helper.Log($"Room key: {keyRoom}, Userkey: {u.keyRoom}");
             if (!Users.Contains(u) && u.keyRoom == keyRoom)
             {
                 Users.Add(u);
             }
 
-            Trace.WriteLine($"Count client: {Users.Count}");
+            Helper.Log($"Count client: {Users.Count}");
 
-            if (Users.Count ==2)
+            if (Users.Count == 2)
             {
                 foreach (var user in Users)
                 {
@@ -40,14 +40,14 @@ namespace AspServerDodo.Logic
 
         public void RemoveUser(User u)
         {
-                Trace.WriteLine("REMOVE USER");
+            Helper.Log("REMOVE USER");
             foreach (User user in Users)
             {
-                Trace.WriteLine($"UserID: {user.guid} \nu: {u.guid}");
+                Helper.Log($"UserID: {user.guid} \nu: {u.guid}");
             }
             if (Users.Contains(u))
             {
-                Trace.WriteLine("Contains USER");
+                Helper.Log("Contains USER");
                 Users.Remove(u);
             }
         }
