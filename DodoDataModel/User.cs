@@ -17,7 +17,6 @@ namespace DodoDataModel
             {
               return   guid.Equals(((User)obj).guid);
             }
-
         }
     }
 }
